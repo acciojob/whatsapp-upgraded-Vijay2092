@@ -8,13 +8,13 @@ import java.util.List;
 @Service
 public class WhatsappService {
 
-    WhatsappRepository whatsappRepository = new WhatsappRepository();
-    public String createUser(String name, String mobile) throws Exception {
+    WhatsappRepository whatsappRepository =new WhatsappRepository();
+
+    public String createUser(String name, String mobile) throws Exception{
         return whatsappRepository.createUser(name, mobile);
     }
-
-    public Group createGroup(List<User> users) {
-        return  whatsappRepository.createGroup(users);
+    public Group createGroup(List<User> users){
+        return whatsappRepository.createGroup(users);
     }
     public int createMessage(String content){
         return whatsappRepository.createMessage(content);
